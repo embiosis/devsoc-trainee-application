@@ -1,4 +1,8 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    font-family: Palatino, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: Rubik, Palatino, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #233222
 }
