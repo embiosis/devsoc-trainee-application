@@ -2,7 +2,26 @@ html {
     scroll-behavior: smooth;
 }
 
+:root {
+    --text: #120c08;
+    --background: #faf8f5;
+    --primary: #ee6c6c;
+    --secondary: #c4d397;
+    --accent: #99c473;
+}
+
+h1 {
+    color: #bfbfbf
+}
+
+/* */
 body {
+    background-color: aquamarine;
     font-family: Rubik, Palatino, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #233222
+}
+
+p {
+    background-color: blanchedalmond;
+    color: mediumseagreen;
 }
