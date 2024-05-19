@@ -9,56 +9,136 @@
 
     <title>Circles</title>
 
-    <link href="style.css" rel="stylesheet">
-    <link href="/images/favicon.png" rel="icon">
+    <link href="testing.css" rel="stylesheet">
+    <link href="../assets/favicon.ico" rel="icon">
 
-    <!-- Import Rubik font from Google Fonts-->
+    <!-- Import Rubik and Recursive font from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet">
 </head>
 
+
 <body>
-    <header></header>
-    <h1>
-        Heading 1
-    </h1>
-    <p>
-        This is a paragraph!
-    </p>
-    <p>
-        Currently studying at UNSW.
-    </p>
-    <h3>Hobbies:</h3>
-    <!-- KIRBY'S NOT A HOBBY (or is it...)-->
-    <ul>
-        <li>rock climbing</li>
-        <li>Kirby</li>
-        <li>Gunpla</li>
-        <li>video games</li>
-        <li>piano</li>
-        <li>fantasy novels</li>
-    </ul>
-    <h3>Currently Reading:</h3>
-    <p>
-        Arcanum Unbounded (insert Goodreads link)
-    </p>
-        
-    <h3>Novel Recs:</h3>
-    <ul>
-        <li>Wheel of Time</li>
-        <li>Stormlight Archive</li>
-        <li>Malazan: Book of the Fallen</li>
-    </ul>
-    <!-- Make the game background (embed Steam) pop up in background of button when hovered -->
-    <h3>Game Favs:</h3>
-    <ul>
-        <li>Terraria</li>
-        <li>Celeste</li>
-        <li>Overcooked 2</li>
-        <li>Civilisation VI</li>
-        <li>Kerbal Space Program</li>
-    </ul>
-    <footer></footer>
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="../assets/favicon.png" alt="Logo" class="logo-image" width="48px" height="48px">
+                <div class="logo-text">Circles</div>
+            </div>
+            <a href="#about-me" class="nav-button" id="about-button">
+                <div class="border">
+                    <p>About Me</p>
+                </div>
+            </a>
+            <a href="#fav-games" class="nav-button" id="games-button">
+                <div class="border">
+                    <p>Fav Games</p>
+                </div>
+            </a>
+            <a href="#fav-books" class="nav-button" id="books-button">
+                <div class="border">
+                    <p>Fav Books</p>
+                </div>
+            </a>
+            <a href="#projects" class="nav-button" id="projects-button">
+                <div class="border">
+                    <p>Projects</p>
+                </div>
+            </a>
+            <a href="#links" class="nav-button" id="links-button">
+                <div class="border">
+                    <p>Links</p>
+                </div>
+            </a>
+        </nav>
+    </header>
+    <main>
+        <div class="section" id="about-me">
+            <div class="gradient">
+                <div class="margin">
+                    <div class="text-group">
+                        <div class="heading">
+                            <p>About Me</p>
+                        </div>
+                        <div class="text">
+                            Hey there! I’m Markus, a first-year student studying <b>Computer Science and Mathematics</b> at UNSW. 
+                            I love learning new things and tinkering around with projects. <br><br> 
+                            In my free time, you’ll either find me <b>bouldering</b>, building <b>Gunpla</b>, <b>reading</b>, or finding something new to sink my time into.
+                        </div>
+                    </div>
+                    <div class="picture-frame">
+                        <div class="frame-border"></div>
+                        <div class="fill"></div>
+                        <img src="../assets/wumpus.jpg" alt="wumpus" class="wumpus">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="background"></div>
+        <div class="section" id="fav-games">
+
+        </div>
+        <h2>
+            About Me
+        </h2>
+        <p>
+            This is a paragraph!
+        </p>
+        <p>
+            Currently studying at UNSW.
+        </p>
+        <h3>Hobbies:</h3>
+        <!-- KIRBY'S NOT A HOBBY (or is it...)-->
+        <ul>
+            <li>rock climbing</li>
+            <li>Kirby</li>
+            <li>Gunpla</li>
+            <li>video games</li>
+            <li>piano</li>
+            <li>fantasy novels</li>
+        </ul>
+        <h3>Currently Reading:</h3>
+        <p>
+            Arcanum Unbounded (insert Goodreads link)
+        </p>
+            
+        <h3>Books</h3>
+        <p>I love fantasy novels, but I also like reading other genres. Here are some of my favourite reads:</p>
+        <ul>
+            <li>Wheel of Time</li>
+            <li>Stormlight Archive</li>
+            <li>Malazan: Book of the Fallen</li>
+        </ul>
+        <!-- Make the game background (embed Steam) pop up in background of button when hovered -->
+        <h3>Fav Games:</h3>
+        <ul>
+            <li>Terraria</li>
+            <li>Celeste</li>
+            <li>Overcooked 2</li>
+            <li>VALORANT</li>
+            <li>Kerbal Space Program</li>
+        </ul>
+        <h3>Projects</h3>
+        <ul>
+            <li>This Website</li>
+            <li>See the design draft here: Figma Design Draft</li>
+        </ul>
+        <h3>Links:</h3>
+        <ul>
+            <li>Linkedin</li>
+            <li>Github</li>
+            <li>Email</li>
+        </ul>
+    </main>
+    <footer>
+
+    </footer>
 </body>
 </html>
