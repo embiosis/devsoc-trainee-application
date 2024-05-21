@@ -492,6 +492,7 @@ a.nav-button:hover {
 /* GIF Hover effect */
 .game-image:hover#terraria {
     background-image: url(assets/terraria.gif);
+    background-position-x: 60%;
 }
 
 .game-image:hover#ksp {
