@@ -8,10 +8,28 @@
 
 :root[data-theme="dark"] {
     --text: #e7efe9;
-    --background: #0a100d;
+    --background: #171719;
     --primary: #acc9b5;
     --secondary: #436065;
     --accent: #7791a6;
+}
+
+:root {
+    --nav-font-size: 20px;
+    --header-font-size: 64px;
+    --logo-font-size: 32px;
+    --body-font-size: 18px;
+    --navbar-height: 90px;
+}
+
+@media screen and (max-width: 1200px)  {
+    :root {
+        --nav-font-size: 18px;
+        --header-font-size: 56px;
+        --logo-font-size: 28px;
+        --body-font-size: 16px;
+        --navbar-height: calc(100vw * 3 / 40)
+    }
 }
 
 /* Reset html and body margins to 0 */
@@ -38,7 +56,6 @@ main {
     justify-content: center;
     align-items: center;
 
-    padding: 0px;
     gap: 10px;
 
     width: 100%;
@@ -47,7 +64,7 @@ main {
 
 /* About Me */
 #about-me {
-    background: url(../assets/bridge.png);
+    background: url(assets/bridge.png);
     background-size: cover;
 
     align-self: stretch;
@@ -56,10 +73,10 @@ main {
 
 /* Shadow Gradient */
 .gradient {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    
     padding: 0px;
 
     width: 100%;
@@ -70,6 +87,7 @@ main {
 
     align-self: stretch;
     flex-grow: 1;
+    z-index: 1;
 }
 
 /* Content */
@@ -78,29 +96,44 @@ main {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-
-    padding: 255px 150px;
-    gap: 150px;
+    margin: 90px 300px 0px 300px;
 
     flex-grow: 1;
+    z-index: 2;
 }
 
+.vertical-content {
+    flex-direction: column;
+}
+
+#hero-margin {
+    gap: 150px;
+}
+
+#games-margin {
+    gap: 20px;
+}
 
 /* Text */
 .text-group {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
 
-    padding: 30px 0px;
     gap: 20px;
 
-    width: 365px;
-    height: 397px;
+    width: auto;
+    height: auto;
 }
 
+h1 {
+    margin: 0px;
+}
 
+p {
+    margin: 0px;
+}
 /* About Me */
 .heading {
     width: 360px;
@@ -109,7 +142,7 @@ main {
     font-family: 'Recursive';
     font-style: normal;
     font-weight: 700;
-    font-size: 64px;
+    font-size: var(--header-font-size);
     line-height: 77px;
 
     /* identical to box height */
@@ -117,7 +150,7 @@ main {
     align-items: center;
 
     /* text */
-    color: #E4EAE8;
+    color: var(--text);
 }
 
 
@@ -126,12 +159,12 @@ main {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: var(--body-font-size);
     line-height: 24px;
     /* or 133% */
 
     /* text */
-    color: #E4EAE8;
+    color: var(--text);
 }
 
 
@@ -187,9 +220,9 @@ nav {
 
     position: absolute;
     width: 100%;
-    height: 90px;
+    height: var(--navbar-height);
 
-    background: rgba(23, 23, 25, 0.6);
+    background: rgba(23, 23, 25, 0.8);
     border: 1px solid rgba(228, 234, 232, 0.2);
 
     z-index: 7;
@@ -224,11 +257,11 @@ nav {
     font-family: 'Bauhaus 93';
     font-style: normal;
     font-weight: 400;
-    font-size: 32px;
+    font-size: var(--logo-font-size);
     line-height: 47px;
 
     /* text */
-    color: #E4EAE8;
+    color: var(--text);
 }
 
 /* Nav Button */
@@ -287,13 +320,13 @@ a.nav-button:hover {
     font-family: 'Rubik';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
+    font-size: var(--nav-font-size);
     line-height: 24px;
 
     /* identical to box height */
     text-align: center;
 
-    color: #E4EAE8;
+    color: var(--text);
 }
 
 /* Games */
@@ -309,7 +342,7 @@ a.nav-button:hover {
 }
 
 /* Gradient Background */
-.background {
+.gradient-background {
     position: absolute;
 
     width: 100%;
@@ -318,6 +351,191 @@ a.nav-button:hover {
 
     background: linear-gradient(180deg, #171719 0%, #383838 100%);
 
-    order: 7;
     z-index: -1;
+}
+
+/* Embed */
+.embed {
+    border-radius: 50%;
+    transition: border-radius 300ms ease-out;
+}
+
+.embed:hover {
+    border-radius: 12px;
+    transition: border-radius 200ms ease-out;
+}
+
+.center {
+    justify-content: center;
+    align-items: center;
+    width: auto;
+}
+
+#games-text {
+    width: 500px;
+}
+
+/* Horizontal Carousel */
+.carousel {
+    display: flex;
+    flex-direction: row;
+
+    width: max-content;
+    max-width: 909px;
+    height: auto;
+
+    padding: 15px 0px;
+    gap: 50px;
+    overflow: hidden;
+
+    align-self: stretch;
+}
+
+.slider {
+    animation: scroll 40s linear infinite;
+    display: flex;
+    gap: 50px;
+    width: calc(360px * 5 + 442.94px + 250px);
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-360px * 5 - 442.94px - 300px));
+    }
+}
+
+/* Hide scrollbars */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Game Card */
+.game-card {
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px 30px 28px 30px;
+    gap: 30px;
+
+    width: max-content;
+    height: max-content;
+
+    background: linear-gradient(171.83deg, rgba(179, 194, 190, 0.2) 3.7%, rgba(132, 136, 156, 0.14) 61.53%, rgba(74, 82, 91, 0.14) 96.3%);
+    backdrop-filter: blur(2px);
+    
+    border-style: solid;
+    border-color: var(--accent);
+    border-width: 0px;
+    border-radius: 30px;
+}
+
+/* Game Image */
+.game-image {
+    position: relative;
+    width: 300px;
+    height: 300px;
+
+    background-color: transparent;
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+/* Funky div stuff with the border means it's annoying to use <img> here */
+.game-image#terraria {
+    background-image: url(assets/terraria.gif);
+}
+
+.game-image#ksp {
+    background-image: url(assets/ksp.gif);
+}
+
+.game-image#overcooked {
+    background-image: url(assets/overcooked.gif);
+}
+
+.game-image#celeste {
+    background-image: url(assets/celeste.gif);
+}
+
+.game-image#valorant {
+    background-image: url(assets/valorant.gif);
+    background-size: 220%;
+}
+
+.game-image#frostpunk {
+    background-image: url(assets/frostpunk.gif);
+}
+
+.game-image:hover {
+    display: block;
+}
+
+
+/* Circular Frame */
+.game-image-border {
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    height: 300px;
+    width: 300px;
+    mask: radial-gradient(transparent 139px,#000 140px);
+
+    background: linear-gradient(45deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
+    border-radius: 50%;
+}
+
+/* Game Text Div */
+.game-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 12px;
+
+    width: auto;
+    height: auto;
+}
+
+/* Game Title */
+.game-title {
+    width: auto;
+    height: auto;
+
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 36px;
+    line-height: 36px;
+
+    align-items: center;
+    text-align: center;
+    text-wrap: nowrap;
+
+    color: var(--text);
+}
+
+/* Game Description */
+.game-description {
+    width: auto;
+    height: auto;
+
+    font-family: 'Gochi Hand';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 24px;
+
+    align-items: flex-end;
+    text-align: center;
+
+    color: var(--text);
 }

@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<!-- Change data-theme later using JavaScript -->
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
-    <meta name="description" content="DevSoc Trainee Application 24T2 Theme: Circles">
+    <meta name="description" content="DevSoc Trainee Application 24T2 | Theme: Circles">
     <meta name="keywords" content="HTML, CSS, JavaScript">
     <meta name="author" content="John Doe">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,9 +12,9 @@
     <title>Circles</title>
 
     <link href="testing.css" rel="stylesheet">
-    <link rel="preconnect" href="/assets/favicon.ico" rel="icon">
+    <link rel="preconnect icon" href="assets/favicon.ico">
 
-    <!-- Import Rubik and Recursive font from Google Fonts-->
+    <!-- Import Rubik, Recursive and Gochi Hand font from Google Fonts-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -21,15 +23,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Recursive:wght@300..1000&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap" rel="stylesheet">
+
+    <!-- Import Bauhaus 93 font from CDNFonts -->
     <link href="https://fonts.cdnfonts.com/css/bauhaus-93" rel="stylesheet">
 </head>
 
-
-<body>
+<!-- Toggle whether the scrollbar is hidden using JavaScript to remove the no-scrollbar class -->
+<body class="no-scrollbar">
     <header>
         <nav>
             <div class="logo">
-                <img src="/assets/favicon.png" alt="Logo" class="logo-image" width="48px" height="48px">
+                <img src="assets/logo.png" alt="Logo" class="logo-image" width="48px" height="48px">
                 <div class="logo-text">Circles</div>
             </div>
             <a href="#about-me" class="nav-button" id="about-button">
@@ -60,30 +67,176 @@
         </nav>
     </header>
     <main>
+        <div class="gradient-background"></div>
         <div class="section" id="about-me">
-            <div class="gradient">
-                <div class="margin">
-                    <div class="text-group">
-                        <div class="heading">
-                            <p>About Me</p>
-                        </div>
-                        <div class="text">
-                            Hey there! I’m Markus, a first-year student studying <b>Computer Science and Mathematics</b> at UNSW. 
-                            I love learning new things and tinkering around with projects. <br><br> 
-                            In my free time, you’ll either find me <b>bouldering</b>, building <b>Gunpla</b>, <b>reading</b>, or finding something new to sink my time into.
-                        </div>
-                    </div>
-                    <div class="picture-frame">
-                        <div class="frame-border"></div>
-                        <div class="fill"></div>
-                        <img src="/assets/wumpus.jpg" alt="wumpus" class="wumpus">
-                    </div>
+            <div class="gradient"></div>
+            <div class="margin" id="hero-margin">
+                <div class="text-group">
+                    <h1 class="heading">About Me</h1>
+                    <p class="text" style="width: 360px">
+                        Hey there! I’m Markus, a first-year student studying <b>Computer Science and Mathematics</b> at UNSW. 
+                        I love learning new things and tinkering around with projects. <br><br> 
+                        In my free time, you’ll either find me <b>bouldering</b>, building <b>Gunpla</b>, <b>reading</b>, or finding something new to sink my time into.
+                    </p>
+                </div>
+                <div class="picture-frame">
+                    <div class="frame-border"></div>
+                    <div class="fill"></div>
+                    <img src="assets/wumpus.jpg" alt="wumpus" class="wumpus">
                 </div>
             </div>
         </div>
-        <div class="background"></div>
         <div class="section" id="fav-games">
-            <div class="margin"></div>
+            <div class="margin vertical-content" id="games-margin">
+                <div class="text-group center">
+                    <h1 class="heading center">Fav Games</h1>
+                    <p class="text" id="games-text">
+                        I love playing all sorts of games! I’m an avid indie fan, but I love my fair share of bigger titles as well. 
+                        I'm also always down to goof around with friends in fun co-op games. Here’s a selection of some of my favourites.
+                    </p>
+                </div>
+                <div class="carousel">
+                    <div class="slider">
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="terraria">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Terraria</p>
+                                    <p class="game-description">all time fav</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="overcooked">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Overcooked 2</p>
+                                    <p class="game-description">best with friends</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="ksp">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Kerbal Space Program</p>
+                                    <p class="game-description">chaotic, simulation fun</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="celeste">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Celeste</p>
+                                    <p class="game-description">heartfelt platformer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="valorant">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">VALORANT</p>
+                                    <p class="game-description">shoot heads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="frostpunk">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Frostpunk</p>
+                                    <p class="game-description">make the hard decisions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="slider">
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="terraria">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Terraria</p>
+                                    <p class="game-description">all time fav</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="overcooked">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Overcooked 2</p>
+                                    <p class="game-description">best with friends</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="ksp">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Kerbal Space Program</p>
+                                    <p class="game-description">chaotic, simulation fun</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="celeste">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Celeste</p>
+                                    <p class="game-description">heartfelt platformer</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="valorant">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">VALORANT</p>
+                                    <p class="game-description">shoot heads</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="game-card-border">
+                            <div class="game-card">
+                                <div class="game-image" id="frostpunk">
+                                    <div class="game-image-border"></div>
+                                </div>
+                                <div class="game-text">
+                                    <p class="game-title">Frostpunk</p>
+                                    <p class="game-description">make the hard choice</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <p class="text" style="font-size: 14px; padding: 0px 10px">
+                    Got a game you love but don’t see on here? Give me a recommendation if you ever catch me around on campus!
+                </p>
+            </div>
         </div>
         <div class="section" id="fav-books">
 
@@ -130,7 +283,11 @@
             <li>Overcooked 2</li>
             <li>VALORANT</li>
             <li>Kerbal Space Program</li>
+            <li>Mario Kart Wii</li>
+            <li></li>
         </ul>
+        <iframe src="https://store.steampowered.com/widget/105600/8183/" frameborder="0" width="646" height="190"></iframe>
+        <iframe class='embed' src="https://open.spotify.com/embed/track/6wffxmLgeZTbvS1hYvLkht?utm_source=generator&theme=0" width="352px" height="352px" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
         <h3>Projects</h3>
         <ul>
             <li>This Website</li>
