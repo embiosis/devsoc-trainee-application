@@ -437,60 +437,82 @@ a.nav-button:hover {
 /* Game Image */
 .game-image {
     position: relative;
-    width: 300px;
-    height: 300px;
+    width: 278px;
+    height: 278px;
+    margin: 11px;
 
     background-color: transparent;
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
     border-radius: 50%;
 }
 
 /* Funky div stuff with the border means it's annoying to use <img> here */
 .game-image#terraria {
-    background-image: url(assets/terraria.gif);
+    background-image: url(assets/terraria.jpg);
 }
 
 .game-image#ksp {
-    background-image: url(assets/ksp.gif);
+    background-image: url(assets/ksp.jpg);
 }
 
 .game-image#overcooked {
-    background-image: url(assets/overcooked.gif);
+    background-image: url(assets/overcooked.jpg);
 }
 
 .game-image#celeste {
-    background-image: url(assets/celeste.gif);
+    background-image: url(assets/celeste.jpg);
+    background-position: top;
 }
 
 .game-image#valorant {
+    background-image: url(assets/valorant.jpg);
+}
+
+.game-image#frostpunk {
+    background-image: url(assets/frostpunk.jpg);
+}
+
+/* GIF Hover effect */
+.game-image:hover#terraria {
+    background-image: url(assets/terraria.gif);
+}
+
+.game-image:hover#ksp {
+    background-image: url(assets/ksp.gif);
+}
+
+.game-image:hover#overcooked {
+    background-image: url(assets/overcooked.gif);
+}
+
+.game-image:hover#celeste {
+    background-image: url(assets/celeste.gif);
+}
+
+.game-image:hover#valorant {
     background-image: url(assets/valorant.gif);
     background-size: 220%;
 }
 
-.game-image#frostpunk {
+.game-image:hover#frostpunk {
     background-image: url(assets/frostpunk.gif);
 }
 
-.game-image:hover {
-    display: block;
-}
-
-
 /* Circular Frame */
-.game-image-border {
+.game-image::before {
+    content: "";
     position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+    left: -11px;
+    top: -11px;
 
     height: 300px;
     width: 300px;
-    mask: radial-gradient(transparent 139px,#000 140px);
 
-    background: linear-gradient(45deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
+    background: linear-gradient(135deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
     border-radius: 50%;
+    z-index: -1;
 }
 
 /* Game Text Div */
