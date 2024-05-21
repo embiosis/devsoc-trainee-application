@@ -490,28 +490,28 @@ a.nav-button:hover {
 }
 
 /* GIF Hover effect */
-.game-image:hover#terraria {
+.game-image#terraria:hover {
     background-image: url(assets/terraria.gif);
 }
 
-.game-image:hover#ksp {
+.game-image#ksp:hover {
     background-image: url(assets/ksp.gif);
 }
 
-.game-image:hover#overcooked {
+.game-image#overcooked:hover {
     background-image: url(assets/overcooked.gif);
 }
 
-.game-image:hover#celeste {
+.game-image#celeste:hover {
     background-image: url(assets/celeste.gif);
 }
 
-.game-image:hover#valorant {
+.game-image#valorant:hover {
     background-image: url(assets/valorant.gif);
     background-size: 220%;
 }
 
-.game-image:hover#frostpunk {
+.game-image#frostpunk:hover {
     background-image: url(assets/frostpunk.gif);
 }
 
