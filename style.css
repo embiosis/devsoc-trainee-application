@@ -15,7 +15,7 @@
 }
 
 :root {
-    --nav-font-size: 20px;
+    --nav-font-size: 18px;
     --header-font-size: 64px;
     --logo-font-size: 32px;
     --body-font-size: 18px;
@@ -24,7 +24,7 @@
 
 @media screen and (max-width: 1200px)  {
     :root {
-        --nav-font-size: 18px;
+        --nav-font-size: 16px;
         --header-font-size: 56px;
         --logo-font-size: 28px;
         --body-font-size: 16px;
@@ -696,7 +696,7 @@ a.nav-button:hover {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    padding: 25px 150px;
+    padding: 25px 150px 50px 150px;
     gap: 30px;
 }
 
