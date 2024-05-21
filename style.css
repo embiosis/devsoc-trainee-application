@@ -449,7 +449,7 @@ a.nav-button:hover {
 }
 
 /* Circular Frame */
-.game-image::before {
+.game-image::after {
     content: "";
     position: absolute;
     left: -11px;
