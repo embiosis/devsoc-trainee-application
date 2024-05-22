@@ -5,7 +5,7 @@
     --secondary: #9ab7bc;
     --accent: #597388;
     --background-2: #adadad;
-    --card-background: linear-gradient(-8.17deg, rgba(179, 194, 190, 0.6) 3.7%, rgba(132, 136, 156, 0.42) 61.53%, rgba(74, 82, 91, 0.42) 96.3%);
+    --card-background: linear-gradient(-8.17deg, rgba(179, 194, 190, 0.6) 3.7%, rgba(132, 136, 156, 0.5) 61.53%, rgba(74, 82, 91, 0.5) 96.3%);
     --image-frame: linear-gradient(135deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
     --nav-background: rgba(239, 245, 242, 0.4);
     --nav-border: rgba(16, 24, 18, 0.2);
@@ -107,6 +107,27 @@ main {
 
     align-self: stretch;
     z-index: 5;
+}
+
+#fav-games {
+    position: relative;
+}
+
+#fav-games::before {
+    display: block;
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.2;
+    background: url(assets/games.jpg);
+    background-size: cover;
+    background-position: 100%;
+    align-self: stretch;
+    z-index: 0;
 }
 
 /* Shadow Gradient */
