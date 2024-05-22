@@ -18,7 +18,7 @@ The page contains the following features:
 - Consistent card design for games and projects
 - Animated, expanding project cards with links that appear when hovered
 - Responsive hover effects when interacting with buttons and links
-- Responsive page design using flexbox and simple media queries
+- Responsive page design using flexbox and media queries
   
 While the majority of this page was created using pure HTML and CSS, a little bit of JavaScript was implemented to change between dark and light mode themes.
 
