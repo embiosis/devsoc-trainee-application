@@ -1,3 +1,4 @@
+/* Light theme variables */
 :root[data-theme="light"] {
     --text: #101812;
     --background: #eff5f2;
@@ -13,6 +14,7 @@
     --nav-hover-shadow: rgba(16, 24, 18, 0.25);
 }
 
+/* Dark theme variables */
 :root[data-theme="dark"] {
     --text: #e7efe9;
     --background: #171719;
@@ -28,6 +30,7 @@
     --nav-hover-shadow: rgba(228, 234, 232, 0.15);
 }
 
+/* Font-size variables */
 :root {
     --nav-font-size: 18px;
     --header-font-size: 64px;
@@ -42,7 +45,13 @@
         --header-font-size: 56px;
         --logo-font-size: 28px;
         --body-font-size: 16px;
-        --navbar-height: calc(100vw * 3 / 40)
+        --navbar-height: calc(100vw * 3 / 40);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --navbar-height: 67.5px;
     }
 }
 
@@ -59,7 +68,7 @@ b {
     font-weight: 600;
 }
 
-/* Reset html and body margins to 0 */
+/* Override default properties */
 html {
     scroll-behavior: smooth;
 }
@@ -76,6 +85,11 @@ main {
     position: relative;
 }
 
+h1, p {
+    margin: 0px;
+}
+
+/* Section */
 .section {
     display: flex;
     flex-direction: column;
@@ -173,7 +187,7 @@ main {
     gap: 20px;
 }
 
-/* Text */
+/* Text Frame */
 .text-group {
     display: flex;
     flex-direction: column;
@@ -182,15 +196,6 @@ main {
 
     gap: 20px;
 }
-
-h1 {
-    margin: 0px;
-}
-
-p {
-    margin: 0px;
-}
-
 
 /* About Me */
 .heading {
@@ -209,12 +214,13 @@ p {
 }
 
 
-/* Hey there! I’m Markus, a first-year studying Computer Science and Mathematics at UNSW. I love learning new things and tinkering around with projects. In my free time, you’ll either find me bouldering, building Gunpla, reading, or finding another hobby to sink my time into. Now with scrolling included! */
+/* Text */
 .text {
     font-size: var(--body-font-size);
     line-height: 24px;
 }
 
+/* Hero Text */
 #hero-text * {
     color: #e7efe9;
 }
@@ -283,6 +289,7 @@ nav {
 
 /* Logo */
 .logo {
+    cursor: pointer;
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -320,23 +327,26 @@ a.nav-button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    min-width: 150px;
     
     border: none;
     padding: 0px;
     background-color: transparent;
     text-decoration: none;
 
-    height: 90px;
+    max-height: 90px;
+    align-self: stretch;
 }
 
 /* Nav Button - Hover */
 a.nav-button:hover {
-    padding: 29px 0px 31px;
+    padding: 0px 0px 1px;
     gap: 10px;
     margin: 0px;
     border: 0px;
 
-    height: 30px;
+    max-height: 90px;
+    align-self: stretch;
 
     background: var(--nav-hover);
     box-shadow: inset 0px -10px 20px var(--nav-hover-shadow);
@@ -353,6 +363,8 @@ a.nav-button:hover {
     padding: 0px 35px;
     height: 24px;
 
+    align-self: stretch;
+
     border-left: 1px solid var(--nav-border);
 }
 
@@ -366,7 +378,6 @@ a.nav-button:hover {
 
     text-align: center;
 }
-
 
 /* Games */
 #games {
