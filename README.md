@@ -15,9 +15,10 @@ The page contains the following features:
 - Animated GIFs which appear when game images are hovered
 - Heavy use of circles and circular borders for images
 - An interactive circle logo / favicon which toggles between light and dark themes
-- Repeated, rounded card design for games and projects
+- Consistent card design for games and projects
 - Animated, expanding project cards with links that appear when hovered
 - Responsive hover effects when interacting with buttons and links
+- Responsive page design using flexbox and simple media queries
   
 While the majority of this page was created using pure HTML and CSS, a little bit of JavaScript was implemented to change between dark and light mode themes.
 
