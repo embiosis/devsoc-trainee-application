@@ -24,4 +24,5 @@ While the majority of this page was created using pure HTML and CSS, a little bi
 ___
 
 _Hi there! Thanks for visiting this repository. It's still a work in progress, so there might be more content added later._
+
 This is my first proper website so I'd appreciate any feedback!
