@@ -260,6 +260,11 @@ nav {
     z-index: 7;
 }
 
+button {
+    background-color: transparent;
+    border: none;
+}
+
 /* Logo */
 .logo {
     display: flex;
@@ -269,9 +274,6 @@ nav {
 
     padding: 15px 35px;
     gap: 10px;
-    
-    background-color: transparent;
-    border: none;
 
     order: 0;
 }
