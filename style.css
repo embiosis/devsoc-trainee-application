@@ -4,6 +4,13 @@
     --primary: #365340;
     --secondary: #9ab7bc;
     --accent: #597388;
+    --background-2: #adadad;
+    --card-background: linear-gradient(-8.17deg, rgba(179, 194, 190, 0.6) 3.7%, rgba(132, 136, 156, 0.42) 61.53%, rgba(74, 82, 91, 0.42) 96.3%);
+    --image-frame: linear-gradient(135deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
+    --nav-background: rgba(239, 245, 242, 0.4);
+    --nav-border: rgba(16, 24, 18, 0.2);
+    --nav-hover: rgba(16, 24, 18, 0.05);
+    --nav-hover-shadow: rgba(16, 24, 18, 0.25);
 }
 
 :root[data-theme="dark"] {
@@ -12,6 +19,13 @@
     --primary: #acc9b5;
     --secondary: #436065;
     --accent: #7791a6;
+    --background-2: #383838;
+    --card-background: linear-gradient(171.83deg, rgba(179, 194, 190, 0.2) 3.7%, rgba(132, 136, 156, 0.14) 61.53%, rgba(74, 82, 91, 0.14) 96.3%);
+    --image-frame: linear-gradient(135deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
+    --nav-background: rgba(23, 23, 25, 0.2);
+    --nav-border: rgba(228, 234, 232, 0.2);
+    --nav-hover: rgba(228, 234, 232, 0.05);
+    --nav-hover-shadow: rgba(228, 234, 232, 0.15);
 }
 
 :root {
@@ -42,7 +56,7 @@
 }
 
 b {
-    font-weight: 700;
+    font-weight: 600;
 }
 
 /* Reset html and body margins to 0 */
@@ -50,8 +64,7 @@ html {
     scroll-behavior: smooth;
 }
 
-html, body
-{
+html, body {
     width: 100%;
     height: 100%;
     margin: 0px;
@@ -82,7 +95,7 @@ main {
     width: 100%;
     height: 100%;
 
-    background: linear-gradient(180deg, #171719 0%, #383838 100%);
+    background: linear-gradient(180deg, var(--background) 0%, var(--background-2) 100%);
 
     z-index: -2;
 }
@@ -181,6 +194,9 @@ p {
     line-height: 24px;
 }
 
+#hero-text * {
+    color: #e7efe9;
+}
 
 /* Profile Picture */
 .picture-frame {
@@ -237,8 +253,8 @@ nav {
     width: 100%;
     height: var(--navbar-height);
 
-    background: rgba(23, 23, 25, 0.8);
-    border-bottom: 1px solid rgba(228, 234, 232, 0.2);
+    background-color: var(--nav-background);
+    border-bottom: 1px solid var(--nav-border);
     backdrop-filter: blur(2px);
 
     z-index: 7;
@@ -253,6 +269,9 @@ nav {
 
     padding: 15px 35px;
     gap: 10px;
+    
+    background-color: transparent;
+    border: none;
 
     order: 0;
 }
@@ -298,8 +317,8 @@ a.nav-button:hover {
 
     height: 30px;
 
-    background: rgba(228, 234, 232, 0.05);
-    box-shadow: inset 0px -10px 20px rgba(228, 234, 232, 0.25);
+    background: var(--nav-hover);
+    box-shadow: inset 0px -10px 20px var(--nav-hover-shadow);
 }
 
 
@@ -313,9 +332,7 @@ a.nav-button:hover {
     padding: 0px 35px;
     height: 24px;
 
-    border-width: 0px 1px;
-    border-style: solid;
-    border-color: rgba(228, 234, 232, 0.2);
+    border-left: 1px solid var(--nav-border);
 }
 
 
@@ -381,7 +398,7 @@ a.nav-button:hover {
     animation: scroll 40s linear infinite;
     display: flex;
     gap: 50px;
-    width: calc(360px * 5 + 442.94px + 250px);
+    width: min-content;
 }
 
 @keyframes scroll {
@@ -389,7 +406,7 @@ a.nav-button:hover {
         transform: translateX(0);
     }
     100% {
-        transform: translateX(calc(-360px * 5 - 442.94px - 300px));
+        transform: translateX(calc(-360px * 6 - 442.94px - 350px));
     }
 }
 
@@ -413,18 +430,14 @@ a.nav-button:hover {
     width: max-content;
     height: max-content;
 
-    background: linear-gradient(171.83deg, rgba(179, 194, 190, 0.2) 3.7%, rgba(132, 136, 156, 0.14) 61.53%, rgba(74, 82, 91, 0.14) 96.3%);
+    background: var(--card-background);
     backdrop-filter: blur(2px);
     
-    border-style: solid;
-    border-color: var(--accent);
-    border-width: 0px;
     border-radius: 30px;
 }
 
-
 /* Game Image */
-.game-image {
+.image {
     position: relative;
     width: 278px;
     height: 278px;
@@ -439,7 +452,7 @@ a.nav-button:hover {
 
 
 /* Circular Frame */
-.game-image::before {
+.image::before {
     content: "";
     position: absolute;
     left: -11px;
@@ -448,63 +461,71 @@ a.nav-button:hover {
     height: 300px;
     width: 300px;
 
-    background: linear-gradient(135deg, #B3C2BE 0%, #84889C 50%, #4A525B 100%);
+    background: var(--image-frame);
     border-radius: 50%;
     z-index: -1;
 }
 
 
 /* Funky div stuff with the border means it's annoying to use <img> here */
-.game-image#terraria {
+.image#terraria {
     background-image: url(assets/terraria.jpg);
 }
 
-.game-image#ksp {
+.image#ksp {
     background-image: url(assets/ksp.jpg);
 }
 
-.game-image#overcooked {
+.image#overcooked {
     background-image: url(assets/overcooked.jpg);
 }
 
-.game-image#celeste {
+.image#celeste {
     background-image: url(assets/celeste.jpg);
     background-position: top;
 }
 
-.game-image#valorant {
+.image#valorant {
     background-image: url(assets/valorant.jpg);
 }
 
-.game-image#frostpunk {
+.image#hsr {
+    background-image: url(assets/hsr.jpg);
+}
+
+.image#frostpunk {
     background-image: url(assets/frostpunk.jpg);
 }
 
 
 /* GIF Hover effect */
-.game-image:hover#terraria {
+.image:hover#terraria {
     background-image: url(assets/terraria.gif);
     background-position-x: 60%;
 }
 
-.game-image:hover#ksp {
+.image:hover#ksp {
     background-image: url(assets/ksp.gif);
 }
 
-.game-image:hover#overcooked {
+.image:hover#overcooked {
     background-image: url(assets/overcooked.gif);
 }
 
-.game-image:hover#celeste {
+.image:hover#celeste {
     background-image: url(assets/celeste.gif);
 }
 
-.game-image:hover#valorant {
+.image:hover#valorant {
     background-image: url(assets/valorant.gif);
     background-size: 220%;
 }
 
-.game-image:hover#frostpunk {
+.image:hover#hsr {
+    background-image: url(assets/hsr.gif);
+}
+
+.image:hover#frostpunk {
     background-image: url(assets/frostpunk.gif);
 }
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 
-<!-- Change data-theme later using JavaScript -->
+<!-- My first website using HTML, CSS and JS! -->
 <html lang="en" data-theme="dark">
 <head>
     <meta charset="UTF-8">
@@ -12,6 +12,7 @@
     <title>Circles</title>
 
     <link href="style.css" rel="stylesheet">
+    <script src="script.js"></script>
     <link rel="preconnect icon" href="assets/favicon.ico">
 
     <!-- Import Rubik, Recursive and Gochi Hand font from Google Fonts-->
@@ -35,10 +36,10 @@
 <body class="no-scrollbar">
     <header>
         <nav>
-            <div class="logo">
+            <button onclick="toggleTheme()" class="logo">
                 <img src="assets/logo.png" alt="Circles Logo" class="logo-image" width="48px" height="48px">
                 <div class="logo-text">Circles</div>
-            </div>
+            </button>
             <a href="#about-me" class="nav-button" id="about-button">
                 <div class="border">
                     <p>About Me</p>
@@ -66,7 +67,7 @@
             <div class="section" id="about-me">
                 <div class="gradient"></div>
                 <div class="margin" id="hero-margin">
-                    <div class="text-group">
+                    <div class="text-group" id="hero-text">
                         <h1 class="heading">About Me</h1>
                         <p class="text" style="width: 360px">
                             Hey there! I’m Markus, a first-year student studying <b>Computer Science and Mathematics</b> at UNSW. 
@@ -93,42 +94,49 @@
                     <div class="carousel">
                         <div class="slider">
                             <div class="card">
-                                <div class="game-image" id="terraria"></div>
+                                <div class="image" id="terraria"></div>
                                 <div class="game-text">
                                     <p class="game-title">Terraria</p>
                                     <p class="game-description">all time fav</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="overcooked"></div>
+                                <div class="image" id="overcooked"></div>
                                 <div class="game-text">
                                     <p class="game-title">Overcooked 2</p>
                                     <p class="game-description">best with friends</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="ksp"></div>
+                                <div class="image" id="ksp"></div>
                                 <div class="game-text">
                                     <p class="game-title">Kerbal Space Program</p>
                                     <p class="game-description">chaotic, simulation fun</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="celeste"></div>
+                                <div class="image" id="celeste"></div>
                                 <div class="game-text">
                                     <p class="game-title">Celeste</p>
                                     <p class="game-description">heartfelt platformer</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="valorant"></div>
+                                <div class="image" id="valorant"></div>
                                 <div class="game-text">
                                     <p class="game-title">VALORANT</p>
                                     <p class="game-description">shoot heads</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="frostpunk"></div>
+                                <div class="image" id="hsr"></div>
+                                <div class="game-text">
+                                    <p class="game-title">Honkai Star Rail</p>
+                                    <p class="game-description">trailblaze the stars</p>
+                                </div>
+                            </div>
+                            <div class="card">
+                                <div class="image" id="frostpunk"></div>
                                 <div class="game-text">
                                     <p class="game-title">Frostpunk</p>
                                     <p class="game-description">make the hard decisions</p>
@@ -137,29 +145,29 @@
                         </div>
                         <div class="slider">
                             <div class="card">
-                                <div class="game-image" id="terraria"></div>
+                                <div class="image" id="terraria"></div>
                                 <div class="game-text">
                                     <p class="game-title">Terraria</p>
                                     <p class="game-description">all time fav</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="overcooked"></div>
+                                <div class="image" id="overcooked"></div>
                                 <div class="game-text">
                                     <p class="game-title">Overcooked 2</p>
                                     <p class="game-description">best with friends</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="ksp"></div>
+                                <div class="image" id="ksp"></div>
                                 <div class="game-text">
                                     <p class="game-title">Kerbal Space Program</p>
                                     <p class="game-description">chaotic, simulation fun</p>
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="celeste">
-                                    <div class="game-image-border"></div>
+                                <div class="image" id="celeste">
+                                    <div class="image-border"></div>
                                 </div>
                                 <div class="game-text">
                                     <p class="game-title">Celeste</p>
@@ -167,8 +175,8 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="valorant">
-                                    <div class="game-image-border"></div>
+                                <div class="image" id="valorant">
+                                    <div class="image-border"></div>
                                 </div>
                                 <div class="game-text">
                                     <p class="game-title">VALORANT</p>
@@ -176,8 +184,8 @@
                                 </div>
                             </div>
                             <div class="card">
-                                <div class="game-image" id="frostpunk">
-                                    <div class="game-image-border"></div>
+                                <div class="image" id="frostpunk">
+                                    <div class="image-border"></div>
                                 </div>
                                 <div class="game-text">
                                     <p class="game-title">Frostpunk</p>
