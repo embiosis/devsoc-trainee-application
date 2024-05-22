@@ -749,16 +749,3 @@ a.nav-button:hover {
     background-color: rgba(18, 18, 35   , 0.3);
     background-blend-mode: multiply;
 }
-
-#preload-images
-{
-    width: 0px;
-    height: 0px;
-    display: inline;
-    background-image: url(assets/ksp.gif);
-    background-image: url(assets/terraria.gif);
-    background-image: url(assets/celeste.gif);
-    background-image: url(assets/valorant.gif);
-    background-image: url(assets/frostpunk.gif);
-    background-image: url(assets/overcooked.gif);
-}
