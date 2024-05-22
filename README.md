@@ -1,4 +1,4 @@
-# 24T2 DevSoc Trainee Program Application
+# 24T2 DevSoc Trainee Application
 A simple website for applying to the DevSoc Trainee Program (24T2).
 
 In order to apply for the program, I created a profile page with the theme of 'Circles'.
